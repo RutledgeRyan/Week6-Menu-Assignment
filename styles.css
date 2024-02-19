@@ -1,0 +1,231 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: #cfb991;
+  color: #010326;
+  text-align: center;
+  margin: 0;
+}
+
+h1, h2 {
+  color: black;
+}
+
+p, li {
+  color: black;
+  text-align: center;
+}
+
+header {
+  height: 100px;
+  background: #cfb991;
+  font-size: 150%;
+  text-align: center;
+}
+
+main {
+  background: #000000;
+  text-align: left;
+  padding: 20px;
+}
+
+footer {
+  background: #cfb991;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: 1.5px solid #daaa00;
+  perspective: 1000px;
+  padding: 5px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #ebd99f;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #c4bfc0;
+  transform: rotateY(180deg);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Banner {
+  display: inline-block;
+  height: 10%;
+  width: 100%;
+  background-color: black;
+}
+.Banner img {
+ height: 100%;
+}
+
+nav {
+
+  position: absolute;
+
+  z-index: 1000;
+
+  top: 0;
+
+  left: 0;
+
+  width: 30%;
+
+  height: 100vh;
+
+  border: 1px;
+
+  padding: 1px;
+
+  text-align: center;
+
+  transform: translateY(-100%);
+
+  transition: transform 0.1s ease;
+
+  background-color: #cfb991;
+}
+nav ul {
+
+  list-style-type: none;
+
+  margin: 0;
+
+  padding: 0;
+
+  
+
+}
+
+nav a {
+
+text-decoration: none;
+color: black;
+padding: 3px;
+
+
+
+}
+nav li{
+  display: inline-block;
+  }
+  
+    
+    
+  nav a:link {
+  background-color: rgb(0, 0, 0);
+  color: rgb(171, 168, 0);
+  }
+  nav a:visited {
+  background-color: black;
+  color: white;
+  
+  }
+  nav a:hover {
+  background-color:black;
+  color: rgb(54, 189, 137);
+  }
+
+nav:target {
+
+  transform: translateY(0);
+
+}
+@media screen and (min-width: 700px) {
+
+  nav {
+
+    position: static;
+
+    height: auto;
+
+    transform: translateY(0);
+
+    width: 100%;
+
+  }
+
+  .hamburger,
+
+  .close {
+
+    display: none;
+
+  }
+
+
+
+  nav li {
+
+    display: inline-block;
+
+  }
+  
+
+}
+
+
+@media all and (min-width: 768px) {
+  .container {
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+  header, footer {
+      width: 100%;
+  }
+  main {
+      flex: 2;
+      order: 2;
+      min-height: 80vh;
+  }
+  article {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+  footer {
+      order: 4;
+  }
+}
